@@ -61,6 +61,7 @@ a { color: inherit; text-decoration: none; }
 .secondary-link { border: 1px solid var(--line-strong); background: rgba(255,255,255,.018); color: #d2e2dc; }
 .trust-row { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 27px; color: var(--muted); font-size: 10px; }
 .trust-row b { margin-right: 4px; color: var(--green); }
+.download-section{padding-block:80px}.download-card{display:grid;grid-template-columns:70px minmax(0,1fr) auto;align-items:center;gap:24px;padding:30px;border:1px solid rgba(66,230,164,.2);border-radius:18px;background:linear-gradient(135deg,rgba(21,58,47,.7),rgba(8,23,19,.96));box-shadow:var(--shadow)}.download-icon{width:66px;height:66px;display:grid;place-items:center;border-radius:16px;background:rgba(66,230,164,.07)}.download-icon .brand-mark{width:46px;height:46px}.download-copy h2{margin:9px 0 0;font-size:28px;letter-spacing:-.035em}.download-copy p{max-width:650px;margin:10px 0 0;color:var(--muted);font-size:12px;line-height:1.6}.download-meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}.download-meta span{padding:5px 8px;border:1px solid var(--line);border-radius:999px;color:#abc4ba;font-size:8px}.download-actions{display:grid;gap:10px;text-align:center}.download-actions>a:last-child{color:var(--muted);font-size:9px}.install-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}.install-steps>div{display:flex;align-items:center;gap:10px;padding:13px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.015)}.install-steps b{width:27px;height:27px;display:grid;place-items:center;border-radius:7px;background:rgba(66,230,164,.09);color:var(--green);font-size:9px}.install-steps span,.install-steps strong,.install-steps small{display:block}.install-steps strong{font-size:10px}.install-steps small{margin-top:3px;color:var(--muted);font-size:8px}
 
 .terminal-card { position: relative; overflow: hidden; border: 1px solid rgba(112, 208, 169, .19); border-radius: 18px; background: linear-gradient(145deg, rgba(15, 34, 29, .96), rgba(7, 18, 15, .98)); box-shadow: var(--shadow); transform: perspective(1400px) rotateY(-3deg) rotateX(1deg); }
 .terminal-card::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(115deg, rgba(255,255,255,.04), transparent 28%); }
@@ -110,6 +111,7 @@ footer { min-height: 120px; display: grid; grid-template-columns: 1fr 1.5fr 1fr;
 @keyframes shimmer { to { background-position: -200% 0; } }
 
 @media (max-width: 980px) {
+  .download-card{grid-template-columns:60px 1fr}.download-actions{grid-column:1/-1}.download-actions .primary-link{width:100%}
   .site-header { grid-template-columns: 1fr auto; }.site-header nav { display: none; }
   .hero { grid-template-columns: 1fr; gap: 55px; padding-top: 70px; }.hero-copy { max-width: 720px; }.terminal-card { transform: none; }
   .feature-grid, .future-grid { grid-template-columns: 1fr; }.feature-card { min-height: 260px; }
@@ -117,6 +119,7 @@ footer { min-height: 120px; display: grid; grid-template-columns: 1fr 1.5fr 1fr;
 }
 
 @media (max-width: 700px) {
+  .download-card{grid-template-columns:1fr;padding:22px}.download-icon{display:none}.install-steps{grid-template-columns:1fr}
   .section-shell { width: min(100% - 28px, 1180px); }.site-header { min-height: 66px; padding-inline: 14px; }.brand small, .header-actions .ghost-button { display: none; }.brand-mark { width: 32px; height: 32px; }.primary-button, .ghost-button { min-height: 36px; padding-inline: 13px; }
   .hero { min-height: 0; padding-block: 60px; }.hero h1 { font-size: 43px; }.hero-copy > p { font-size: 14px; }.hero-actions a { width: 100%; }.trust-row { gap: 10px; }
   .terminal-card { border-radius: 13px; }.ticker-row { grid-template-columns: repeat(2, 1fr); }.ticker-row > div:nth-child(2) { border-right: 0; }.ticker-row > div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }.chart-demo { height: 210px; }.reading-card { grid-template-columns: 34px 1fr; }.score { display: none; }
@@ -127,5 +130,4 @@ footer { min-height: 120px; display: grid; grid-template-columns: 1fr 1.5fr 1fr;
   footer { grid-template-columns: 1fr; padding-block: 35px; text-align: center; }.footer-brand { margin-inline: auto; }footer > span:last-child { text-align: center; }
   .modal { padding: 19px; }.account-stats, .admin-summary { grid-template-columns: 1fr 1fr; }.account-identity { grid-template-columns: 42px 1fr; }.account-identity .text-button { grid-column: 1 / -1; justify-self: start; }.admin-summary article:last-child { grid-column: 1 / -1; }
 }
-
 

@@ -4,7 +4,7 @@ export const SUPABASE_CONFIG = Object.freeze({
 });
 
 export const APP_CONFIG = Object.freeze({
-  releaseUrl: "https://github.com/haker1707/market-copilot/releases/latest",
+  releaseUrl: "https://github.com/haker1707/market-copilot-releases/releases/latest/download/Market-Copilot-Setup-Latest.exe",
   supportEmail: "suporte@marketcopilot.com.br"
 });
 
